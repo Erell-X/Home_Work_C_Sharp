@@ -6,26 +6,26 @@
 // a = -9 b = -3 -> max = -3
 
 Console.Clear();
-
+  
 int Number1, Number2;
 
-Console.WriteLine("Введите 1-е число");
+Console.WriteLine("Введите 1-е число (Number1)");
 Number1 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите 2-е число");
+Console.WriteLine("Введите 2-е число (Number2)");
 Number2 = Convert.ToInt32(Console.ReadLine());
 
 if (Number1 > Number2)
 {
-  Console.WriteLine($"Число {Number1} больше числа {Number2}");
+  Console.WriteLine($"Max = Number1 = {Number1}");
 }
 
 else if (Number1 < Number2)
 {
-  Console.WriteLine($"Число {Number1} меньше числа {Number2}");
+  Console.WriteLine($"Max = Number2 = {Number2}");
 }
 
 else if (Number1 == Number2)
 {
-  Console.WriteLine($"Числа равны друг другу");
+  Console.WriteLine($"Max = Number1 = Number2 = {Number1}");
 }
