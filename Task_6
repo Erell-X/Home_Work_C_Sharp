@@ -1,0 +1,29 @@
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа 
+// или сообщает, что третьей цифры нет.
+
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+using System;
+
+class Program6 {
+
+  static void Main() {
+
+  int Num, Res lastFigure;
+  
+  Console.Clear();
+  Console.WriteLine("Введите число: ")
+  Num = Convert.ToInt32(Console.ReadLine());
+  
+  while (Res >= 1 && Res<=9)
+  {
+    Res = Num / 10;
+  }
+    
+  Console.WriteLine(Res)
+    
+  }
+  
+}
