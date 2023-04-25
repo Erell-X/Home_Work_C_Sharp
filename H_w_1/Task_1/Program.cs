@@ -1,43 +1,32 @@
 
-// Задача 13: Напишите программу, которая выводит третью цифру заданного числа 
-// или сообщает, что третьей цифры нет.
+// Напишите программу, которая на вход принимает два числа и выдаёт, 
+// какое число большее, а какое меньшее.
 
-// 645 -> 5
-// 78 -> третьей цифры нет
-// 32679 -> 6
+// a = 5; b = 7 -> max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
 
-using System;
+Console.Clear();
 
-class Program6 {
+int Number1, Number2;
 
-  static void Main() {
+Console.WriteLine("Введите 1-е число");
+Number1 = Convert.ToInt32(Console.ReadLine());
 
-  int Num, Res, lastFigure;
-  
-  lastFigure = 0;
-  
-  Console.Clear();
-  Console.WriteLine("Введите число: ");
-  Num = Convert.ToInt32(Console.ReadLine());
-  
-  if (Num/100 >= 1 && Num/100 <= 9)
-  {
-    lastFigure = Num % 10;
-    
-    Console.WriteLine($"Третья цифра заданного числа равна {lastFigure}");
-  }
-  
-  else if (Num/100 > 10)
-  {
-    Res = Num / 10 
-  }
-  
-  else if (Num/100 < 1)
-  {
-    Console.WriteLine("Третьей цифры у заданного числа нет");
-  }
+Console.WriteLine("Введите 2-е число");
+Number2 = Convert.ToInt32(Console.ReadLine());
 
- 
-  }
-  
+if (Number1 > Number2)
+{
+  Console.WriteLine($"Число {Number1} больше числа {Number2}");
+}
+
+else if (Number1 < Number2)
+{
+  Console.WriteLine($"Число {Number1} меньше числа {Number2}");
+}
+
+else if (Number1 == Number2)
+{
+  Console.WriteLine($"Числа равны друг другу");
 }
