@@ -1,37 +1,28 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
- 
-namespace Array_from_set_user_parameter5
+﻿// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и 
+// выводит их на экран.
+
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+// 6, 1, 33 -> [6, 1, 33]
+
+// int[] nums = new int[8];
+// int mas = 0;
+
+// mas = new Random();
+// nums[0] = new Random();
+// nums[1] = 10;
+// nums[2] = 100;
+// nums[3] = 18;
+// nums[4] = 78;
+// nums[5] = 23;
+// nums[6] = 63;
+// nums[7] = 9;
+// nums[8] = 87;
+// nums[9] = 49;
+
+int[] array = new int[8];
+Random Rand = new Random();
+for (int x = 0; x < 8; x++)
 {
-/* Продемонстрировать одномерный массив из дробных чисел.
-   Количество элементов массива задаётся с клавиатуры */
-  class Program
-   {
-    static void Main(string[] args)
-     {
-     // Задать с клавиатуры число элементов массива
-        int n;
-        Console.WriteLine("Введите число элементов массива");
-        n = Convert.ToInt16(Console.ReadLine());
-     // Объявим одномерный массив Data с n-элементами 
-        double [] Data = new double[n];
-        int i = 0;
-       while (i < n)
-        {
-           Console.WriteLine("Введите элемент массива");
-        /* Вводим элементы массива с клавиатуры 
-         * и заполняем ими массив */
-           Data[i] = double.Parse(Console.ReadLine());
-           Console.WriteLine();
-           i++;
-        }
-   // Вывод содержимого массива
-     for (i = 0; i < n; i = i + 1)
-     Console.WriteLine("Элемент[" + i + "]: " + Data[i]);
-     Console.ReadKey();
-   }
- }
+     array[x] = Rand.Next(1, 9);
 }
