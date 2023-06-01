@@ -12,7 +12,7 @@ int[] Array(int size)
 
   for (int i = 0; i < arr.Length; i++)
   {
-    arr[i] = rnd.Next(1000);
+    arr[i] = rnd.Next(-1000, 1000);
   }
   return arr;
 }
