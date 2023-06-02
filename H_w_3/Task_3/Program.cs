@@ -5,46 +5,38 @@
 
 double[] Array (int size)
 {
-  double[] arr = new double[size];
-  Random rnd = new Random();
+  double[] arr = new double [size];
+  Random rnd = new Random();            
 
-  for (int i = 0; i < arr.Length; i++)
+  for (int i = 0; i < arr.Length; i++) 
   {
-    arr[i] =rnd.Next(-100, 100) + rnd.NextDouble();
+    arr[i] = rnd.Next(-1000, 1000) + rnd.NextDouble(); 
+    arr[i] = Math.Round(arr[i], 1);
   }
-  return arr;
+  return arr;                        
 }
 
-System.Console.Write("Введите размер массива: ");
+Console.Write ("Введение размера массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
-double[] array = Array(length);
-System.Console.WriteLine(string.Join(", ", array));
+double[] array = Array (length);                  
+Console.WriteLine(string.Join("; ", array));      
 
-double min = 0;
+double min = 0, 
+       max = 0;
 
 for (int i = 0; i < array.Length; i++)
 {
-  if (array[i] < array[i+1])
-  {
-    min = array[i];
-  }
-
-return array;
-
+  if (array[i] < min) min = array[i];
 }
 
-System.Console.WriteLine($"Минимальное {min}");
+for (int i = 0; i < array.Length; i++)
+{
+  if (array[i] > max) max = array[i];
+}
 
+double diff = max - min;
+       diff = Math.Round(diff, 1);
 
-
-// double[] Array (int length)
-// {
-//   double[] arr2 = new double[length];
-//   Random rnd = new Random();
-
-//   for (int i = 0; i < arr2.Length; i++)
-//   {
-//     arr2[i] = max;
-//   }
-//   return arr2;
-// }
+System.Console.WriteLine($"Макс = {max}");
+System.Console.WriteLine($"Мин = {min}");
+System.Console.WriteLine($"{max} - {min} = {diff}");
