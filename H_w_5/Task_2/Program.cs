@@ -10,7 +10,7 @@
 
 // 17 -> такого числа в массиве нет
 
-void FillMatrixWithRandomNumbers(int[,] matrix)
+void FillMatrix(int[,] matrix)
 {
   Random rnd = new Random();
   for (int i = 0; i < matrix.GetLength(0); i++)
@@ -69,6 +69,6 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix = new int[m, n];
 
-FillMatrixWithRandomNumbers(matrix);
+FillMatrix(matrix);
 PrintMatrix(matrix);
 Element(matrix);

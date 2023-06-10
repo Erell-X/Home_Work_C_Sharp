@@ -54,15 +54,15 @@
 // FillImage(13,13);
 // PrintImage(pic);
 
-string[,] table = new string[25,25];
+// string[,] table = new string[25,25];
 
-table[1, 2] = "Привет, Алина!";
+// table[1, 2] = "Привет, Алина!";
 
-for (int rows = 0; rows < 25; rows++)
-{
- for (int columns = 0; columns < 25; columns++)
- {
- Console.Write($"-{table[rows, columns]}-");
- }
- Console.WriteLine();
-}
+// for (int rows = 0; rows < 25; rows++)
+// {
+//  for (int columns = 0; columns < 25; columns++)
+//  {
+//  Console.Write($"-{table[rows, columns]}-");
+//  }
+//  Console.WriteLine();
+// }
