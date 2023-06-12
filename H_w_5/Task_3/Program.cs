@@ -34,7 +34,7 @@ void PrintMatrix(int[,] matrix)
 double Average(int[,] matrix)
 {
   double Av = 0;
-
+  
   for (int j = 0; j < matrix.GetLength(1); j++)
   {
     for (int i = 0; i < matrix.GetLength(0); i++)
