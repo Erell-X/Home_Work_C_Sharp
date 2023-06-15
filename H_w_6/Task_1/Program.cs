@@ -9,7 +9,7 @@
 // 9 5 3 2
 // 8 4 4 2
 
-void FillMatrix(int[,] matrix)
+void fillMatrix(int[,] matrix)
 {
   Random rnd = new Random();
   for (int i = 0; i < matrix.GetLength(0); i++)
@@ -21,7 +21,7 @@ void FillMatrix(int[,] matrix)
   }
 }
 
-void PrintMatrix(int[,] matrix)
+void printMatrix(int[,] matrix)
 {
   for (int i = 0; i < matrix.GetLength(0); i++)
   {
@@ -33,35 +33,35 @@ void PrintMatrix(int[,] matrix)
   }
 }
 
-void DecreasingElements(int[,] matrix, int[,] newmatrix)
+void decreasingElements(int[,] matrix)
 {
-  int orig = 0;
-  for (int i = 0; i < newmatrix.GetLength(0); i++)
+  for (int i = 0; i < matrix.GetLength(0); i++)
   {
-    for (int j = 0; j < newmatrix.GetLength(1); j++)
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-      orig = matrix[i, j];
-      if (matrix[i, j] < matrix[i, j + 1])
+      for (int r = 0; r < matrix.GetLength(1) - 1; r++)
       {
-        matrix[i, j] = matrix[i, j + 1];
-      }
-      newmatrix[i, j] = matrix[i, j+1];
-      matrix[i, j+1] = orig;
-    }
-  }
+        if (matrix[i, r + 1] > matrix[i, r])
+				{
+  int temp = matrix[i, r];
+  matrix[i, r] = matrix[i, r + 1];
+  matrix[i, r + 1] = temp;
+}
+			}
+		}
+	}
 }
 
-System.Console.Write("Введите количество строк: ");
+Console.WriteLine("Введите количество строк: ");
 int m = Convert.ToInt32(Console.ReadLine());
 
-System.Console.Write("Введите количество столбцов: ");
+Console.WriteLine("Введите количество столбцов: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix = new int[m, n];
-int[,] newmatrix = new int[m, n];
 
-FillMatrix(matrix);
-PrintMatrix(matrix);
-System.Console.WriteLine();
-DecreasingElements(matrix, newmatrix);
-PrintMatrix(newmatrix);
+fillMatrix(matrix);
+printMatrix(matrix);
+Console.WriteLine();
+decreasingElements(matrix);
+printMatrix(matrix);
